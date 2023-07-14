@@ -10,56 +10,65 @@ namespace UnitTestingExercise.Tests
         public void AddTest(int num1, int num2, int num3, int expected)
         {
             //Start Step 3 here:
-
-            //Arrange
-            // create a Calculator object
             
+            //Arrange
+            // create a Calculator object--DONE!
+            Calculator calculator = new Calculator();
 
             //Act
-                // call the Add method that is located in the Calculator class
-                // and store its result in a variable named actual
+            // call the Add method that is located in the Calculator class--DONE!
+            var actual = calculator.Add(num1, num2, num3);
+
+            // and store its result in a variable named actual--DONE!
 
             //Assert
-                //Assert.Equal(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(5, 3, 2)]//Add test data <-------
         public void SubtractTest(int minuend, int subtrhend, int expected)
         {
             //Start Step 5 here:
 
             //Arrange
+            Calculator calculator = new Calculator();
 
             //Act
+            var actual = calculator.Subtract(minuend, subtrhend);
 
             //Assert
-
+            Assert.Equal(expected, actual);
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(5, 6, 30)]//Add test data <-------
         public void MultiplyTest(int num1, int num2, int expected)
         {
             //Start Step 7 here:
 
             //Arrange
+            Calculator calculator = new Calculator();
 
             //Act
+            var actual = calculator.Product(num1, num2);
 
             //Assert
-
+            Assert.Equal(expected, actual);
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(25, 5, 5)]//Add test data <-------
         public void DivideTest(int num1, int num2, int expected)
         {
             //Arrange
+            Calculator calculator = new Calculator();
 
             //Act
+            var actual = calculator.Quotient(num1, num2);
 
             //Assert
+            Assert.Equal(expected, actual);
 
         }
 
